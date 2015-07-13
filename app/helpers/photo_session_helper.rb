@@ -1,0 +1,2 @@
+module PhotoSessionHelper
+end

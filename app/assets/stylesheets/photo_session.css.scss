@@ -1,0 +1,108 @@
+// Place all the styles related to the PhotoSession controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* General background styles*/
+
+body {
+  background: rgb(248, 250, 144);
+  background-image: url(http://i357.photobucket.com/albums/oo16/Elizabeth-Nevaehs-Mommy/Baby20pooh20poses20paper2.jpg%3Ft%3D1242084716);
+  text-align: center;
+  width: 100%;
+}
+
+header {
+  background-image: linear-gradient(rgb(3, 140, 255), rgb(214, 154, 197), rgb(205, 123, 136));
+   text-align: center;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5rem;
+  color: rgb(40, 31, 31);
+  margin-bottom: 0;
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: rgb(40, 31, 31);
+  margin-top: 0;
+}
+
+#formbackground {
+  background-color: rgb(203, 185, 168);
+  margin: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+/* Syling the photos on the screen*/
+
+.secondary div img {
+  width: 214px;
+}
+
+/* Syling the camera images */
+#my_camera{
+  display: inline;
+  float: left;
+  position: relative;
+  z-index: 1;
+}
+
+/* Syling the taken images  */
+#my_result1, #my_result2, #my_result3 {
+  z-index: 1;
+  height: 160px;
+}
+
+/* this puts the results div on the right side of the screen */
+.secondary {
+  text-align: left;
+  width: 75%;
+  margin-left: 17%;
+}
+
+/* styling for the button and countdown*/
+
+
+/* this puts the start and countdown div on the center of the screen */
+.primary {
+  text-align: -webkit-center;
+}
+
+
+/* this is styles for the start button */
+.start {
+  background: rgb(97, 87, 88);
+  border-radius: 50%;
+  border: none;
+  display: inline-flex;
+  position: absolute;
+  z-index: 2;
+  margin-left: -90px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: rgb(205, 123, 136);
+}
+
+/* styles for #countDiv (hide and show) */
+.show {
+  background: rgb(97, 87, 88);
+  border-radius: 50%;
+  width: 100px;
+  height: 60px;
+  position: absolute;
+  z-index: 2;
+  display: -webkit-inline-box;
+  margin-left: -90px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: rgb(205, 123, 136);
+}
+
+/*  hides both the countdown div and the button div*/
+.hide{
+  display: none;
+}
