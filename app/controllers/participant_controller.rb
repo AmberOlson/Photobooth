@@ -3,9 +3,9 @@ class ParticipantController < ApplicationController
   def index
   end
 
-  def submit
+  def create
   end
 
   def add_person
-  end 
+  end
 end
