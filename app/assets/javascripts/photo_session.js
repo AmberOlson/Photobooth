@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
   var $button = $(":button")
   var $countDiv = $("#countDiv");
-  var counter = 5;
+  var counter = 1;
   var photoCounter = 0;
 
 
@@ -46,11 +46,12 @@ $( document ).ready(function() {
     } else  {
       $countDiv.removeClass("show").addClass("hide");
       photoCounter += 1; // keeps track of the number of photos taken
-      counter = 5; // resets the counter so the count down can beging again
+      counter = 1; // resets the counter so the count down can beging again
       takeAPhoto();
-      if (photoCounter <= 2){ // resarts the process untill tree photos are taken
+      if (photoCounter <= 2){ // resarts the process untill three photos are taken
         divCreater();
       } else { // once all of the photos are taken stops taken photos and puts the start button back
+        submitForm ();
         $button.removeClass("hide").addClass("start")
         photoCounter = 0;
       }
@@ -58,10 +59,28 @@ $( document ).ready(function() {
   }
 
   // takes the photo
+//  function takeAPhoto (){
+  //  Webcam.snap( function(data_uri) {
+    //  var elementID = "my_result" + photoCounter
+    //  document.getElementById(elementID).innerHTML = '<img src="'+data_uri+'"/>';
+  //  });
+//  }
+//});
+
   function takeAPhoto (){
-    Webcam.snap( function(data_uri) {
-      var elementID = "my_result" + photoCounter
-      document.getElementById(elementID).innerHTML = '<img src="'+data_uri+'"/>';
-    });
-  }
+      Webcam.snap( function(data_uri) {
+        var elementID = "my_result" + photoCounter;
+        document.getElementById(elementID).innerHTML = '<img src="'+data_uri+'"/>';
+
+        var raw_image_data = data_uri.replace(/^data\:image\/\w+\;base64\,/, '');
+        var dataID = 'mydata' + photoCounter;
+        document.getElementById(dataID ).value = raw_image_data;
+      //  document.getElementById('myform').submit();
+   });
+ };
+
+ function submitForm (){
+       document.getElementById('myform').submit();
+ };
+
 });

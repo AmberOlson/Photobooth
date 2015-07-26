@@ -1,4 +1,5 @@
 class PhotoSession < ActiveRecord::Base
-  has_many :photos, :participants
+  has_many :photos
+  has_many :participants
 
 end

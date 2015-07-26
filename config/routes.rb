@@ -18,7 +18,6 @@ Photobooth::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
     resources :photo_session
-    resources :user
   # Example resource route with options:
   #   resources :products do
   #     member do
