@@ -1,17 +1,28 @@
+
 <html>
   <head>
     <title> Amber and Al </title>
     <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="style.css"></link>
   </head>
-  <body>
+  <body id="body">
     <header>
       <h1> Baby Brennan </h1>
-      <h2> Est. Oct </h2>
+      <h2> Est. Oct 2015 </h2>
     </header>
 
+    <div class="linkdiv">
+      <%= link_to "View all Photos", photo_session_index_path, :class=> "link" %>
+    </div>
+
+    <div class="loader">
+      <center>
+       <img class="loading-image" src="assets/loading.jpg" alt="loading..">
+     </center>
+   </div>
+
     <section class="primary">
-      <button id="start" class="start"> Start</button>
+      <button id="start" class="show"> Start </button>
       <div id="countDiv" class="hide"></div>
     </section>
 
@@ -27,7 +38,6 @@
         <input id="mydata3" type="hidden" name="mydata3" value=""/>
       </form>
     </section>
-
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   </body>
 </html>

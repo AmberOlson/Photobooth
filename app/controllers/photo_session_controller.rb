@@ -4,9 +4,19 @@ class PhotoSessionController < ApplicationController
 
   def index
     @PhotoSessions = PhotoSession.all
+    @photo = Photo.all
+  end
+
+  def show
+    @PhotoSessions = PhotoSession.all
+    @photo = Photo.all
   end
 
   def photobooth
+  end
+
+  def new
+    @PhotoSessions = PhotoSession.new
   end
 
   def create
@@ -28,7 +38,8 @@ class PhotoSessionController < ApplicationController
     @photo3.photo_session_id = @PhotoSessions.id
     @photo3.save
 
-    redirect_to  "/participant"
+   redirect_to :back
+    #redirect_to  "/participant/" + @PhotoSessions.idS
   end
 
 end

@@ -22,6 +22,7 @@ $addButton.bind("click", (function (event) {
   event.preventDefault();
   i += 1;
   $form.append(buildHTML(i));
+  document.getElementById('formbackground').submit();
 }));
 
 });

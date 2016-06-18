@@ -1,0 +1,15 @@
+<title> Amber and Al </title>
+<link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="style.css"></link>
+</head>
+<body>
+  <header>
+    <h1> Baby Brennan </h1>
+    <h2> Est. Oct 2015 </h2>
+  </header>
+
+  <h3><%= link_to "Take Photo", root_path, :class=> "link" %></h3>
+
+  <% @photo.reverse_each do |photo| %>
+    <img class="photogallery" src='data:image/jpeg;base64,<%=  photo.image_data %>'/>
+  <% end %>
